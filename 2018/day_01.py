@@ -3,29 +3,29 @@ import itertools
 import pathlib
 
 
-def part_1(iterable) -> int:
+def part1(iterable) -> int:
     """
-    >>> part_1(["+1", "+1", "+1"])
+    >>> part1(["+1", "+1", "+1"])
     3
-    >>> part_1(["+1", "+1", "-2"])
+    >>> part1(["+1", "+1", "-2"])
     0
-    >>> part_1(["-1", "-2", "-3"])
+    >>> part1(["-1", "-2", "-3"])
     -6
     """
     return sum(int(x) for x in iterable)
 
 
-def part_2(iterable) -> int:
+def part2(iterable) -> int:
     """
-    >>> part_2([1, -2, 3, 1])
+    >>> part2([1, -2, 3, 1])
     2
-    >>> part_2(["+1", "-1"])
+    >>> part2(["+1", "-1"])
     0
-    >>> part_2(["+3", "+3", "+4", "-2", "-4"])
+    >>> part2(["+3", "+3", "+4", "-2", "-4"])
     10
-    >>> part_2(["-6", "3", "8", "5", "-6"])
+    >>> part2(["-6", "3", "8", "5", "-6"])
     5
-    >>> part_2(["7", "7", "-2", "-7", "-4"])
+    >>> part2(["7", "7", "-2", "-7", "-4"])
     14
     """
     current_position = 0
@@ -42,7 +42,7 @@ if __name__ == "__main__":
     input_file = path / "day_01_input.txt"
 
     with open(input_file) as f:
-        print("part 1:", part_1(f))
+        print("part 1:", part1(f))
 
     with open(input_file) as f:
-        print("part 2:", part_2(f))
+        print("part 2:", part2(f))
