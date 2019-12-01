@@ -28,7 +28,6 @@ func main() {
 	}
 	defer f.Close()
 	scanner := bufio.NewScanner(f)
-	scanner.Split(bufio.ScanLines)
 
 	sum := 0
 	for scanner.Scan() {
